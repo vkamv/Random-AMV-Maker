@@ -8,10 +8,13 @@ from moviepy.editor import *
 from moviepy.editor import VideoFileClip
 import moviepy.editor as mp
 
+# ENTER FOLDER ON SYSTEM WITH VIDEO CLIPS YOU WANT TO USE.
+
 subfolder = "\ANIMEVIDS"
 videos = os.listdir(subfolder)
-clips = []
-mp3dir = "SONGS"
+
+# ENTER FOLDER ON SYSTEM WITH AUDIO CLIPS YOU WANT TO USE.
+mp3dir = "\SONGS"
 mp3s = os.listdir(mp3dir)
 
 r = random.randint(0, len(mp3s) - 1)
@@ -22,6 +25,8 @@ duration = song.duration
 # DEFINE IN AND OUT TIME LIMITS IN SECONDS FOR THE VIDEO. I CHOOSE 120 START TO SKIP INTRO.
 I = 200
 O = 1080
+
+clips = []
 
 num_clips = 0
 while(num_clips<150):
